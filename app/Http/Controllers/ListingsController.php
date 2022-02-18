@@ -23,4 +23,62 @@ class ListingsController extends Controller
             
             return view('listing/index', ['listings' => $listings]);
     }
+
+    public function new()
+    {
+        return view('listing/new');
+        
+    }
+
+    public function store(Request $request)
+    {
+        //バリデーション（入力値チェック）
+        $validator = Validator::make($request->all() , ['list_name' => 'required|max:255', ]);
+
+        //バリデーションの結果がエラーの場合
+        if ($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+
+        // Listingモデル作成
+        $listings = new Listing;
+        $listings->title = $request->list_name;
+        $listings->user_id = Auth::user()->id;
+
+        $listings->save();
+        // 「/」 ルートにリダイレクト
+        return redirect('/');
+    }
+
+    public function edit($listing_id)
+    {
+        $listing = Listing::find($listing_id);
+        return view('listing/edit', ['listing' => $listing]);
+    }
+
+    public function update(Request $request)
+    {
+        //バリデーション（入力値チェック）
+        $validator = Validator::make($request->all() , ['list_name' => 'required|max:255', ]);
+
+        //バリデーションの結果がエラーの場合
+        if ($validator->fails())
+        {
+          return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+        
+        $listing = Listing::find($request->id);
+        $listing->title = $request->list_name;
+        $listing->save();
+        return redirect('/');
+    }
+
+    public function destroy($listing_id)
+    {
+        $listing = Listing::find($listing_id);
+        $listing->delete();
+        return redirect('/');
+    }
+
 }

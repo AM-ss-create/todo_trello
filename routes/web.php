@@ -13,9 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//リスト一覧画面
 Route::get('/','App\Http\Controllers\ListingsController@index');
 
+//リスト新規画面
+Route::get('/new', 'App\Http\ControllersListingsController@new')->name('new');
+
+//リスト新規処理
+Route::post('/listings','App\Http\ControllersListingsController@store');
+
+//リスト更新画面
+Route::get('/listingsedit/{listing_id}', 'App\Http\ControllersListingsController@edit');
+
+//リスト更新処理
+Route::post('/listing/edit','App\Http\ControllersListingsController@update');
+
+//リスト削除処理
+Route::get('/listingsdelete/{listing_id}', 'App\Http\ControllersListingsController@destroy');
 
 Auth::routes();
 
