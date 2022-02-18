@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,19 +18,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','App\Http\Controllers\ListingsController@index');
 
 //リスト新規画面
-Route::get('/new', 'App\Http\ControllersListingsController@new')->name('new');
+Route::get('/new', 'App\Http\Controllers\ListingsController@new')->name('new');
 
 //リスト新規処理
-Route::post('/listings','App\Http\ControllersListingsController@store');
+Route::post('/listings','App\Http\Controllers\ListingsController@store');
 
 //リスト更新画面
-Route::get('/listingsedit/{listing_id}', 'App\Http\ControllersListingsController@edit');
+Route::get('/listingsedit/{listing_id}', 'App\Http\ControllersListings\Controller@edit');
 
 //リスト更新処理
-Route::post('/listing/edit','App\Http\ControllersListingsController@update');
+Route::post('/listing/edit','App\Http\ControllersListings\Controller@update');
 
 //リスト削除処理
-Route::get('/listingsdelete/{listing_id}', 'App\Http\ControllersListingsController@destroy');
+Route::get('/listingsdelete/{listing_id}', 'App\Http\ControllersListings\Controller@destroy');
 
 Auth::routes();
 

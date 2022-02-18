@@ -8,6 +8,7 @@ use Validator;
 
 use Illuminate\Http\Request;
 
+
 class ListingsController extends Controller
 {
     public function __construct()
