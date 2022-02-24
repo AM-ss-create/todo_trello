@@ -24,7 +24,7 @@
           @endforeach
           <div class="addCard">
             <i class="far fa-plus-square"></i>
-            <a class="addCard_link" href="/listing/{{$listing->id}}/card/new">さらにカードを追加</a>
+            <a class="addCard_link" href="/listing/{{$listing->id}}/card/new">add cards</a>
           </div>
         </div>
         <!-- カード表示部分 -->

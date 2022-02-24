@@ -16,7 +16,7 @@
       <div class="form-group"> 
         <div class="col-sm-offset-3 col-sm-6"> 
           <button type="submit" class="btn btn-default">
-            <i class="glyphicon glyphicon-saved"></i> 更新
+          <input type="submit" name="commit" value="update" class="submitBtn" data-disable-with="update">
           </button> 
         </div>
       </div>

@@ -7,7 +7,7 @@
   <form action="{{ url('listings')}}" method="POST" class="form-horizontal">
   {{csrf_field()}} 
     <div class="form-group"> 
-      <label for="listing" class="col-sm-3 control-label">リスト名</label> 
+      <label for="listing" class="col-sm-3 control-label">list</label> 
       <div class="col-sm-6"> 
         <input type="text" name="list_name" class="form-control" value="{{ old('list_name') }}">
       </div>
@@ -15,7 +15,7 @@
     <div class="form-group"> 
       <div class="col-sm-offset-3 col-sm-6"> 
         <button type="submit" class=".btn">
-        <i class="glyphicon glyphicon-plus"></i> 作成 </button> 
+        <i class="glyphicon glyphicon-plus"></i> add </button> 
       </div>
     </div>
   </form>
