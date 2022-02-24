@@ -14,7 +14,7 @@
     </div>
     <div class="form-group"> 
       <div class="col-sm-offset-3 col-sm-6"> 
-        <button type="submit" class="btn btn-default">
+        <button type="submit" class=".btn">
         <i class="glyphicon glyphicon-plus"></i> 作成 </button> 
       </div>
     </div>
