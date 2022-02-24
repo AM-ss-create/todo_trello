@@ -17,6 +17,6 @@ class Listing extends Model
     //hasMany設定
     public function cards()
     {
-        return $this->hasMany('App\Card');
+        return $this->hasMany('App\Models\Card');
     }
 }

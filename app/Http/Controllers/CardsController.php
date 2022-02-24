@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use App\Card;
-use App\Listing;
+use App\Models\Card;
+use App\Models\Listing;
 use Validator;
 
 use Illuminate\Http\Request;
