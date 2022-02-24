@@ -4,8 +4,9 @@
 <!-- バリデーションエラーの場合に表示 --> 
 @include('common.errors')
   <!-- リスト作成フォーム -->
-  <form action="{{ url('listings')}}" method="POST" class="form-horizontal">
-  {{csrf_field()}} 
+  <div class="container">
+   <form action="{{ url('listings')}}" method="POST" class="form-horizontal">
+   {{csrf_field()}} 
     <div class="form-group"> 
       <label for="listing" class="col-sm-3 control-label">list</label> 
       <div class="col-sm-6"> 
@@ -13,12 +14,13 @@
       </div>
     </div>
     <div class="form-group"> 
-      <div class="col-sm-offset-3 col-sm-6"> 
+      <div class="text-center"> 
         <button type="submit" class=".btn">
         <i class="glyphicon glyphicon-plus"></i> add </button> 
       </div>
     </div>
-  </form>
+   </form>
+  </div>
 </div> 
 @endsection
 
