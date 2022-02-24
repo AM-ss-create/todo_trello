@@ -24,13 +24,13 @@ Route::get('/new', 'App\Http\Controllers\ListingsController@new')->name('new');
 Route::post('/listings','App\Http\Controllers\ListingsController@store');
 
 //リスト更新画面
-Route::get('/listingsedit/{listing_id}', 'App\Http\ControllersListings\Controller@edit');
+Route::get('/listingsedit/{listing_id}', 'App\Http\Controllers\ListingsController@edit');
 
 //リスト更新処理
-Route::post('/listing/edit','App\Http\ControllersListings\Controller@update');
+Route::post('/listing/edit','App\Http\Controllers\ListingsController@update');
 
 //リスト削除処理
-Route::get('/listingsdelete/{listing_id}', 'App\Http\ControllersListings\Controller@destroy');
+Route::get('/listingsdelete/{listing_id}', 'App\Http\Controllers\ListingsController@destroy');
 
 Auth::routes();
 
