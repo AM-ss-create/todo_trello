@@ -13,8 +13,8 @@
         <div>memo : {{ $card->memo }}</div>
       </div>
       <div class="cardContents_btnArea">
-        <a class="edit_btn" href="/listing/{{ $listing->id }}/card/{{ $card->id }}/edit"><i class="fas fa-pen"></i>edit</a>
-        <a class="text-danger delete_btn"  onclick="return confirm('このカードを削除して大丈夫ですか?')" rel="nofollow" data-method="delete" href="/listing/{{ $listing->id }}/card/{{ $card->id }}/delete"><i class="fas fa-trash"></i>delete</a>
+        <a class="edit_btn" href="/listing/{{ $listing->id }}/card/{{ $card->id }}/edit"><i class="fas fa-pen"></i></a>
+        <a class="text-danger delete_btn"  onclick="return confirm('このカードを削除して大丈夫ですか?')" rel="nofollow" data-method="delete" href="/listing/{{ $listing->id }}/card/{{ $card->id }}/delete"><i class="fas fa-trash"></i></a>
       </div>
     </div>
   </div>
