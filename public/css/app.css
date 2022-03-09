@@ -246,7 +246,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 .topPage {
   min-height: 93vh;
   padding-top: 30px;
-  background: #bababa;
+  background: #496f7c;
   overflow-x: scroll;
 }
 .topPage .listWrapper {

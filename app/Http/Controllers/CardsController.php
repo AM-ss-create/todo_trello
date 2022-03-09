@@ -52,7 +52,7 @@ class CardsController extends Controller
     {
         $listing = Listing::find($listing_id);
         $card = Card::find($card_id);
-         // テンプレート「card/show.blade.php」を表示します。
+         // テンプレート「card/show.blade.php」を表示
         return view('card/show', ['listing' => $listing, 'card' => $card]);
     }
 
@@ -61,7 +61,7 @@ class CardsController extends Controller
         $listings = Listing::where('user_id', Auth::user()->id)->get();
         $listing = Listing::find($listing_id);
         $card = Card::find($card_id);
-         // テンプレート「card/edit.blade.php」を表示します。
+         // テンプレート「card/edit.blade.php」を表示
         return view('card/edit', ['listings' => $listings, 'listing' => $listing, 'card' => $card]);
     }
 
