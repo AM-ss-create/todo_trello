@@ -26,5 +26,9 @@
     },
     "dependencies": {
         "vuedraggable": "^2.24.3"
+    },
+    "engines": {
+        "node": "17.x",
+        "npm": "8.x"
     }
 }
